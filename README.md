@@ -16,10 +16,7 @@ A modern URL shortening web application built with Next.js 13.
 - [Next.js 13](https://nextjs.org/) - React framework with App Router
 - [TypeScript](https://www.typescriptlang.org/) - Type safety
 - [Tailwind CSS](https://tailwindcss.com/) - Styling
-- [shadcn/ui](https://ui.shadcn.com/) - UI components
-- [React Hook Form](https://react-hook-form.com/) - Form handling
-- [Zod](https://zod.dev/) - Schema validation
-
+- 
 ## Getting Started
 
 ### Prerequisites
@@ -31,41 +28,37 @@ A modern URL shortening web application built with Next.js 13.
 
 1. Clone the repository:
 
-git clone https://github.com/yourusername/url-shortener-client.git
-
+```
+git clone https://github.com/ameni-selmi/shortener-url-client.git
+cd shortener-url-client
+```
 
 2. Install dependencies:
 
-cd url-shortener-client
-npm install
-# or
+```
 yarn install
-
+```
 
 3. Create a `.env.local` file in the root directory and add your environment variables:
 
-NEXT_PUBLIC_API_URL=your_api_url_here
+NEXT_PUBLIC_API_BASE_URL=your_api_url_here
 
 
 4. Run the development server:
-
-npm run dev
-# or
+```
 yarn dev
-
+```
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
 ## Project Structure
 
 
-url-shortener-client/
-├── app/                   # Next.js 13 app directory
-├── components/           # Reusable UI components
-├── lib/                  # Utility functions and configurations
-├── public/              # Static assets
-└── types/               # TypeScript type definitions
-
+url-shortener-client/src/
+├── app/                   # App directory
+├── services/              # Services directory
+├── components/            # Reusable UI components
+├── public/                # Static assets
 
 ## Features in Detail
 
@@ -75,11 +68,6 @@ url-shortener-client/
 - Error handling and user feedback
 - Copy to clipboard functionality
 
-### Responsive Design
-- Mobile-first approach
-- Adaptive layouts for different screen sizes
-- Touch-friendly interface
-
 ## Contributing
 
 1. Fork the repository
@@ -87,12 +75,3 @@ url-shortener-client/
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Thanks to all contributors who have helped shape this project
-- Built with modern web technologies and best practices
