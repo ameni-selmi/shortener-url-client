@@ -9,7 +9,7 @@ import ShortenedUrlDisplay from "@/components/ShortenedUrlDisplay";
 import UrlShortenerForm from "@/components/UrlShortenerForm";
 import axios from "axios";
 import { FormEvent, useState } from "react";
-import { shortenUrl } from "./apiService";
+import { shortenUrl } from "../services/apiService";
 
 interface ShortenResponse {
   shortenedUrl: string;
