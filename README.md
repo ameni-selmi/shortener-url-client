@@ -1,77 +1,74 @@
-
 # URL Shortener Client
 
-A modern URL shortening web application built with Next.js 13.
+This is the frontend for the **URL Shortener** project, built using Next.js, TailwindCSS, and Axios for seamless communication with the backend API.
+
+## Live Demo
+
+The application is deployed on Netlify: [sshorty.netlify.app](https://sshorty.netlify.app)
 
 ## Features
 
-- Shorten long URLs into compact, shareable links
-- Copy shortened URLs to clipboard with one click
-- Responsive design that works on desktop and mobile
-- Real-time URL validation
-- Modern and clean user interface
+- Enter long URLs to generate shortened URLs.
+- Retrieve and copy the shortened URLs.
+- Error handling and validations for invalid or missing input.
+- Minimal and responsive UI designed with TailwindCSS.
 
-## Tech Stack
+## Technologies Used
 
-- [Next.js 13](https://nextjs.org/) - React framework with App Router
-- [TypeScript](https://www.typescriptlang.org/) - Type safety
-- [Tailwind CSS](https://tailwindcss.com/) - Styling
-- 
-## Getting Started
+- **Next.js**: React-based framework for server-rendered and static web applications.
+- **TailwindCSS**: Utility-first CSS framework for styling.
+- **Axios**: Promise-based HTTP client for API interactions.
+
+## Setup and Installation
 
 ### Prerequisites
 
-- Node.js 16.8 or later
-- npm or yarn package manager
+- Node.js and Yarn installed on your machine.
 
-### Installation
+### Steps
 
 1. Clone the repository:
 
-```
-git clone https://github.com/ameni-selmi/shortener-url-client.git
-cd shortener-url-client
-```
+   ```bash
+   git clone https://github.com/ameni-selmi/shortener-url-client.git
+   cd shortener-url-client
+   ```
 
 2. Install dependencies:
 
-```
-yarn install
-```
+   ```bash
+   yarn install
+   ```
 
-3. Create a `.env.local` file in the root directory and add your environment variables:
+3. Set up environment variables:
 
-NEXT_PUBLIC_API_BASE_URL=your_api_url_here
+   Create a `.env.local` file in the root directory and add:
 
+   ```bash
+   NEXT_PUBLIC_API_BASE_URL=<Your Backend API URL>
+   ```
+
+   Example:
+   ```bash
+   NEXT_PUBLIC_API_BASE_URL=http://localhost:5000/
+   ```
 
 4. Run the development server:
-```
-yarn dev
-```
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+   ```bash
+   yarn dev
+   ```
 
-## Project Structure
+5. Open your browser and navigate to:
+
+   ```plaintext
+   http://localhost:3000
+   ```
 
 
-url-shortener-client/src/
-├── app/                   # App directory
-├── services/              # Services directory
-├── components/            # Reusable UI components
-├── public/                # Static assets
+## How It Works
 
-## Features in Detail
-
-### URL Shortening
-- Input validation for valid URLs
-- Loading states during API calls
-- Error handling and user feedback
-- Copy to clipboard functionality
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+1. The user inputs a long URL and submits the form.
+2. The client sends a POST request to the backend API using the URL in `NEXT_PUBLIC_API_BASE_URL`.
+3. On success, the shortened URL is displayed.
+4. Errors (e.g., invalid URLs) are displayed to the user.
