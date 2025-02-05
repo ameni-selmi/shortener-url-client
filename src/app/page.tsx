@@ -5,6 +5,7 @@
 "use client"
 import ErrorMessage from "@/components/ErrorMessage";
 import Header from "@/components/Header";
+import Logo from "@/components/Logo";
 import ShortenedUrlDisplay from "@/components/ShortenedUrlDisplay";
 import UrlShortenerForm from "@/components/UrlShortenerForm";
 import axios from "axios";
@@ -59,6 +60,7 @@ export default function Home() {
 
   return (    
   <div className="flex flex-col items-center justify-center min-h-screen bg-white">
+      <Logo/>
       <Header
         title="URL Shortener"
         description="Transform your long URLs into concise, shareable links."
